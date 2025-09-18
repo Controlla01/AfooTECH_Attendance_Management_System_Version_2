@@ -62,10 +62,131 @@ C:\Users\Michael\Documents\Visual Studio 2010\Projects\AfooTECH_Attendance_Manag
 C:\Users\Michael\Documents\Visual Studio 2010\Projects\AfooTECH_Attendance_Management_System\WindowsApplication2\obj\x86\Debug\WindowsApplication2.regStudent.resources
 C:\Users\Michael\Documents\Visual Studio 2010\Projects\AfooTECH_Attendance_Management_System\WindowsApplication2\obj\x86\Debug\WindowsApplication2.viewadminrecord.resources
 C:\Users\Michael\Documents\Visual Studio 2010\Projects\AfooTECH_Attendance_Management_System\WindowsApplication2\obj\x86\Debug\WindowsApplication2.systemsettings.resources
-C:\Users\Michael\Documents\Visual Studio 2010\Projects\AfooTECH_Attendance_Management_System\WindowsApplication2\obj\x86\Debug\WindowsApplication2.setAttendanceTime.resources
-C:\Users\Michael\Documents\Visual Studio 2010\Projects\AfooTECH_Attendance_Management_System\WindowsApplication2\obj\x86\Debug\WindowsApplication2.setResetFingerprint.resources
 C:\Users\Michael\Documents\Visual Studio 2010\Projects\AfooTECH_Attendance_Management_System\WindowsApplication2\obj\x86\Debug\WindowsApplication2.setChangePassword.resources
-C:\Users\Michael\Documents\Visual Studio 2010\Projects\AfooTECH_Attendance_Management_System\WindowsApplication2\obj\x86\Debug\WindowsApplication2.setResetPassword.resources
 C:\Users\Michael\Documents\Visual Studio 2010\Projects\AfooTECH_Attendance_Management_System\WindowsApplication2\obj\x86\Debug\WindowsApplication2.regstudentfingerprint.resources
 C:\Users\Michael\Documents\Visual Studio 2010\Projects\AfooTECH_Attendance_Management_System\WindowsApplication2\obj\x86\Debug\WindowsApplication2.studentRecords.resources
 C:\Users\Michael\Documents\Visual Studio 2010\Projects\AfooTECH_Attendance_Management_System\WindowsApplication2\obj\x86\Debug\WindowsApplication2.attendanceRecordForm.resources
+C:\Users\Michael\Documents\Visual Studio 2010\Projects\AfooTECH_Attendance_Management_System_Version_2\WindowsApplication2\bin\Debug\bg-1.jpg
+C:\Users\Michael\Documents\Visual Studio 2010\Projects\AfooTECH_Attendance_Management_System_Version_2\WindowsApplication2\bin\Debug\WindowsApplication2.exe
+C:\Users\Michael\Documents\Visual Studio 2010\Projects\AfooTECH_Attendance_Management_System_Version_2\WindowsApplication2\bin\Debug\WindowsApplication2.pdb
+C:\Users\Michael\Documents\Visual Studio 2010\Projects\AfooTECH_Attendance_Management_System_Version_2\WindowsApplication2\bin\Debug\WindowsApplication2.xml
+C:\Users\Michael\Documents\Visual Studio 2010\Projects\AfooTECH_Attendance_Management_System_Version_2\WindowsApplication2\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\Michael\Documents\Visual Studio 2010\Projects\AfooTECH_Attendance_Management_System_Version_2\WindowsApplication2\bin\Debug\Guna.UI2.dll
+C:\Users\Michael\Documents\Visual Studio 2010\Projects\AfooTECH_Attendance_Management_System_Version_2\WindowsApplication2\bin\Debug\itextsharp.dll
+C:\Users\Michael\Documents\Visual Studio 2010\Projects\AfooTECH_Attendance_Management_System_Version_2\WindowsApplication2\bin\Debug\MySql.Data.DLL
+C:\Users\Michael\Documents\Visual Studio 2010\Projects\AfooTECH_Attendance_Management_System_Version_2\WindowsApplication2\bin\Debug\itextsharp.xml
+C:\Users\Michael\Documents\Visual Studio 2010\Projects\AfooTECH_Attendance_Management_System_Version_2\WindowsApplication2\obj\x86\Debug\WindowsApplication2.vbprojResolveAssemblyReference.cache
+C:\Users\Michael\Documents\Visual Studio 2010\Projects\AfooTECH_Attendance_Management_System_Version_2\WindowsApplication2\obj\x86\Debug\WindowsApplication2.adminRecord.resources
+C:\Users\Michael\Documents\Visual Studio 2010\Projects\AfooTECH_Attendance_Management_System_Version_2\WindowsApplication2\obj\x86\Debug\WindowsApplication2.adminfinishresetpassword.resources
+C:\Users\Michael\Documents\Visual Studio 2010\Projects\AfooTECH_Attendance_Management_System_Version_2\WindowsApplication2\obj\x86\Debug\WindowsApplication2.adminportal.resources
+C:\Users\Michael\Documents\Visual Studio 2010\Projects\AfooTECH_Attendance_Management_System_Version_2\WindowsApplication2\obj\x86\Debug\WindowsApplication2.adminlogin.resources
+C:\Users\Michael\Documents\Visual Studio 2010\Projects\AfooTECH_Attendance_Management_System_Version_2\WindowsApplication2\obj\x86\Debug\WindowsApplication2.adminresetpassword.resources
+C:\Users\Michael\Documents\Visual Studio 2010\Projects\AfooTECH_Attendance_Management_System_Version_2\WindowsApplication2\obj\x86\Debug\WindowsApplication2.attendanceRecordForm.resources
+C:\Users\Michael\Documents\Visual Studio 2010\Projects\AfooTECH_Attendance_Management_System_Version_2\WindowsApplication2\obj\x86\Debug\WindowsApplication2.markAttendance.resources
+C:\Users\Michael\Documents\Visual Studio 2010\Projects\AfooTECH_Attendance_Management_System_Version_2\WindowsApplication2\obj\x86\Debug\WindowsApplication2.regStudent.resources
+C:\Users\Michael\Documents\Visual Studio 2010\Projects\AfooTECH_Attendance_Management_System_Version_2\WindowsApplication2\obj\x86\Debug\WindowsApplication2.regstudentfingerprint.resources
+C:\Users\Michael\Documents\Visual Studio 2010\Projects\AfooTECH_Attendance_Management_System_Version_2\WindowsApplication2\obj\x86\Debug\WindowsApplication2.setChangePassword.resources
+C:\Users\Michael\Documents\Visual Studio 2010\Projects\AfooTECH_Attendance_Management_System_Version_2\WindowsApplication2\obj\x86\Debug\WindowsApplication2.studentRecords.resources
+C:\Users\Michael\Documents\Visual Studio 2010\Projects\AfooTECH_Attendance_Management_System_Version_2\WindowsApplication2\obj\x86\Debug\WindowsApplication2.systemSettings.resources
+C:\Users\Michael\Documents\Visual Studio 2010\Projects\AfooTECH_Attendance_Management_System_Version_2\WindowsApplication2\obj\x86\Debug\WindowsApplication2.viewadminrecord.resources
+C:\Users\Michael\Documents\Visual Studio 2010\Projects\AfooTECH_Attendance_Management_System_Version_2\WindowsApplication2\obj\x86\Debug\WindowsApplication2.index.resources
+C:\Users\Michael\Documents\Visual Studio 2010\Projects\AfooTECH_Attendance_Management_System_Version_2\WindowsApplication2\obj\x86\Debug\WindowsApplication2.main.resources
+C:\Users\Michael\Documents\Visual Studio 2010\Projects\AfooTECH_Attendance_Management_System_Version_2\WindowsApplication2\obj\x86\Debug\WindowsApplication2.Resources.resources
+C:\Users\Michael\Documents\Visual Studio 2010\Projects\AfooTECH_Attendance_Management_System_Version_2\WindowsApplication2\obj\x86\Debug\WindowsApplication2.overlay.resources
+C:\Users\Michael\Documents\Visual Studio 2010\Projects\AfooTECH_Attendance_Management_System_Version_2\WindowsApplication2\obj\x86\Debug\WindowsApplication2.vbproj.GenerateResource.Cache
+C:\Users\Michael\Documents\Visual Studio 2010\Projects\AfooTECH_Attendance_Management_System_Version_2\WindowsApplication2\obj\x86\Debug\WindowsApplication2.exe
+C:\Users\Michael\Documents\Visual Studio 2010\Projects\AfooTECH_Attendance_Management_System_Version_2\WindowsApplication2\obj\x86\Debug\WindowsApplication2.xml
+C:\Users\Michael\Documents\Visual Studio 2010\Projects\AfooTECH_Attendance_Management_System_Version_2\WindowsApplication2\obj\x86\Debug\WindowsApplication2.pdb
+C:\Users\King Semako\Documents\Visual Studio 2010\Projects\AfooTECH_Attendance_Management_System_Version_2\WindowsApplication2\obj\x86\Debug\WindowsApplication2.exe
+C:\Users\King Semako\Documents\Visual Studio 2010\Projects\AfooTECH_Attendance_Management_System_Version_2\WindowsApplication2\obj\x86\Debug\WindowsApplication2.xml
+C:\Users\King Semako\Documents\Visual Studio 2010\Projects\AfooTECH_Attendance_Management_System_Version_2\WindowsApplication2\obj\x86\Debug\WindowsApplication2.pdb
+C:\Users\King Semako\Documents\Visual Studio 2010\Projects\AfooTECH_Attendance_Management_System_Version_2\WindowsApplication2\bin\Debug\bg-1.jpg
+C:\Users\King Semako\Documents\Visual Studio 2010\Projects\AfooTECH_Attendance_Management_System_Version_2\WindowsApplication2\bin\Debug\WindowsApplication2.exe
+C:\Users\King Semako\Documents\Visual Studio 2010\Projects\AfooTECH_Attendance_Management_System_Version_2\WindowsApplication2\bin\Debug\WindowsApplication2.pdb
+C:\Users\King Semako\Documents\Visual Studio 2010\Projects\AfooTECH_Attendance_Management_System_Version_2\WindowsApplication2\bin\Debug\WindowsApplication2.xml
+C:\Users\King Semako\Documents\Visual Studio 2010\Projects\AfooTECH_Attendance_Management_System_Version_2\WindowsApplication2\bin\Debug\AForge.Video.DirectShow.dll
+C:\Users\King Semako\Documents\Visual Studio 2010\Projects\AfooTECH_Attendance_Management_System_Version_2\WindowsApplication2\bin\Debug\AForge.Video.dll
+C:\Users\King Semako\Documents\Visual Studio 2010\Projects\AfooTECH_Attendance_Management_System_Version_2\WindowsApplication2\bin\Debug\DPFPDevNET.dll
+C:\Users\King Semako\Documents\Visual Studio 2010\Projects\AfooTECH_Attendance_Management_System_Version_2\WindowsApplication2\bin\Debug\DPFPEngNET.dll
+C:\Users\King Semako\Documents\Visual Studio 2010\Projects\AfooTECH_Attendance_Management_System_Version_2\WindowsApplication2\bin\Debug\DPFPGuiNET.dll
+C:\Users\King Semako\Documents\Visual Studio 2010\Projects\AfooTECH_Attendance_Management_System_Version_2\WindowsApplication2\bin\Debug\DPFPShrNET.dll
+C:\Users\King Semako\Documents\Visual Studio 2010\Projects\AfooTECH_Attendance_Management_System_Version_2\WindowsApplication2\bin\Debug\DPFPVerNET.dll
+C:\Users\King Semako\Documents\Visual Studio 2010\Projects\AfooTECH_Attendance_Management_System_Version_2\WindowsApplication2\bin\Debug\AForge.dll
+C:\Users\King Semako\Documents\Visual Studio 2010\Projects\AfooTECH_Attendance_Management_System_Version_2\WindowsApplication2\bin\Debug\DPFPCtlXWrapperNET.dll
+C:\Users\King Semako\Documents\Visual Studio 2010\Projects\AfooTECH_Attendance_Management_System_Version_2\WindowsApplication2\bin\Debug\DPFPCtlXTypeLibNET.dll
+C:\Users\King Semako\Documents\Visual Studio 2010\Projects\AfooTECH_Attendance_Management_System_Version_2\WindowsApplication2\bin\Debug\DPFPShrXTypeLibNET.dll
+C:\Users\King Semako\Documents\Visual Studio 2010\Projects\AfooTECH_Attendance_Management_System_Version_2\WindowsApplication2\bin\Debug\AForge.Video.xml
+C:\Users\King Semako\Documents\Visual Studio 2010\Projects\AfooTECH_Attendance_Management_System_Version_2\WindowsApplication2\bin\Debug\AForge.Video.DirectShow.xml
+C:\Users\King Semako\Documents\Visual Studio 2010\Projects\AfooTECH_Attendance_Management_System_Version_2\WindowsApplication2\bin\Debug\itextsharp.xml
+C:\Users\King Semako\Documents\Visual Studio 2010\Projects\AfooTECH_Attendance_Management_System_Version_2\WindowsApplication2\bin\Debug\AForge.xml
+C:\Users\King Semako\Documents\Visual Studio 2010\Projects\AfooTECH_Attendance_Management_System_Version_2\WindowsApplication2\obj\x86\Debug\WindowsApplication2.vbprojResolveAssemblyReference.cache
+C:\Users\King Semako\Documents\Visual Studio 2010\Projects\AfooTECH_Attendance_Management_System_Version_2\WindowsApplication2\obj\x86\Debug\WindowsApplication2.adminRecord.resources
+C:\Users\King Semako\Documents\Visual Studio 2010\Projects\AfooTECH_Attendance_Management_System_Version_2\WindowsApplication2\obj\x86\Debug\WindowsApplication2.adminfinishresetpassword.resources
+C:\Users\King Semako\Documents\Visual Studio 2010\Projects\AfooTECH_Attendance_Management_System_Version_2\WindowsApplication2\obj\x86\Debug\WindowsApplication2.adminportal.resources
+C:\Users\King Semako\Documents\Visual Studio 2010\Projects\AfooTECH_Attendance_Management_System_Version_2\WindowsApplication2\obj\x86\Debug\WindowsApplication2.adminlogin.resources
+C:\Users\King Semako\Documents\Visual Studio 2010\Projects\AfooTECH_Attendance_Management_System_Version_2\WindowsApplication2\obj\x86\Debug\WindowsApplication2.adminresetpassword.resources
+C:\Users\King Semako\Documents\Visual Studio 2010\Projects\AfooTECH_Attendance_Management_System_Version_2\WindowsApplication2\obj\x86\Debug\WindowsApplication2.attendanceRecordForm.resources
+C:\Users\King Semako\Documents\Visual Studio 2010\Projects\AfooTECH_Attendance_Management_System_Version_2\WindowsApplication2\obj\x86\Debug\WindowsApplication2.markAttendance.resources
+C:\Users\King Semako\Documents\Visual Studio 2010\Projects\AfooTECH_Attendance_Management_System_Version_2\WindowsApplication2\obj\x86\Debug\WindowsApplication2.regStudent.resources
+C:\Users\King Semako\Documents\Visual Studio 2010\Projects\AfooTECH_Attendance_Management_System_Version_2\WindowsApplication2\obj\x86\Debug\WindowsApplication2.regstudentfingerprint.resources
+C:\Users\King Semako\Documents\Visual Studio 2010\Projects\AfooTECH_Attendance_Management_System_Version_2\WindowsApplication2\obj\x86\Debug\WindowsApplication2.setChangePassword.resources
+C:\Users\King Semako\Documents\Visual Studio 2010\Projects\AfooTECH_Attendance_Management_System_Version_2\WindowsApplication2\obj\x86\Debug\WindowsApplication2.studentRecords.resources
+C:\Users\King Semako\Documents\Visual Studio 2010\Projects\AfooTECH_Attendance_Management_System_Version_2\WindowsApplication2\obj\x86\Debug\WindowsApplication2.systemSettings.resources
+C:\Users\King Semako\Documents\Visual Studio 2010\Projects\AfooTECH_Attendance_Management_System_Version_2\WindowsApplication2\obj\x86\Debug\WindowsApplication2.viewadminrecord.resources
+C:\Users\King Semako\Documents\Visual Studio 2010\Projects\AfooTECH_Attendance_Management_System_Version_2\WindowsApplication2\obj\x86\Debug\WindowsApplication2.index.resources
+C:\Users\King Semako\Documents\Visual Studio 2010\Projects\AfooTECH_Attendance_Management_System_Version_2\WindowsApplication2\obj\x86\Debug\WindowsApplication2.main.resources
+C:\Users\King Semako\Documents\Visual Studio 2010\Projects\AfooTECH_Attendance_Management_System_Version_2\WindowsApplication2\obj\x86\Debug\WindowsApplication2.Resources.resources
+C:\Users\King Semako\Documents\Visual Studio 2010\Projects\AfooTECH_Attendance_Management_System_Version_2\WindowsApplication2\obj\x86\Debug\WindowsApplication2.overlay.resources
+C:\Users\King Semako\Documents\Visual Studio 2010\Projects\AfooTECH_Attendance_Management_System_Version_2\WindowsApplication2\obj\x86\Debug\WindowsApplication2.vbproj.GenerateResource.Cache
+C:\Users\Admin\Documents\Visual Studio 2010\Projects\AfooTECH_Attendance_Management_System_Version_2\WindowsApplication2\obj\x86\Debug\WindowsApplication2.exe
+C:\Users\Admin\Documents\Visual Studio 2010\Projects\AfooTECH_Attendance_Management_System_Version_2\WindowsApplication2\obj\x86\Debug\WindowsApplication2.xml
+C:\Users\Admin\Documents\Visual Studio 2010\Projects\AfooTECH_Attendance_Management_System_Version_2\WindowsApplication2\obj\x86\Debug\WindowsApplication2.pdb
+C:\Users\Admin\Documents\Visual Studio 2010\Projects\AfooTECH_Attendance_Management_System_Version_2\WindowsApplication2\bin\Debug\bg-1.jpg
+C:\Users\Admin\Documents\Visual Studio 2010\Projects\AfooTECH_Attendance_Management_System_Version_2\WindowsApplication2\bin\Debug\WindowsApplication2.exe
+C:\Users\Admin\Documents\Visual Studio 2010\Projects\AfooTECH_Attendance_Management_System_Version_2\WindowsApplication2\bin\Debug\WindowsApplication2.pdb
+C:\Users\Admin\Documents\Visual Studio 2010\Projects\AfooTECH_Attendance_Management_System_Version_2\WindowsApplication2\bin\Debug\WindowsApplication2.xml
+C:\Users\Admin\Documents\Visual Studio 2010\Projects\AfooTECH_Attendance_Management_System_Version_2\WindowsApplication2\obj\x86\Debug\WindowsApplication2.vbprojResolveAssemblyReference.cache
+C:\Users\Admin\Documents\Visual Studio 2010\Projects\AfooTECH_Attendance_Management_System_Version_2\WindowsApplication2\obj\x86\Debug\WindowsApplication2.adminRecord.resources
+C:\Users\Admin\Documents\Visual Studio 2010\Projects\AfooTECH_Attendance_Management_System_Version_2\WindowsApplication2\obj\x86\Debug\WindowsApplication2.adminfinishresetpassword.resources
+C:\Users\Admin\Documents\Visual Studio 2010\Projects\AfooTECH_Attendance_Management_System_Version_2\WindowsApplication2\obj\x86\Debug\WindowsApplication2.adminportal.resources
+C:\Users\Admin\Documents\Visual Studio 2010\Projects\AfooTECH_Attendance_Management_System_Version_2\WindowsApplication2\obj\x86\Debug\WindowsApplication2.adminlogin.resources
+C:\Users\Admin\Documents\Visual Studio 2010\Projects\AfooTECH_Attendance_Management_System_Version_2\WindowsApplication2\obj\x86\Debug\WindowsApplication2.adminresetpassword.resources
+C:\Users\Admin\Documents\Visual Studio 2010\Projects\AfooTECH_Attendance_Management_System_Version_2\WindowsApplication2\obj\x86\Debug\WindowsApplication2.attendanceRecordForm.resources
+C:\Users\Admin\Documents\Visual Studio 2010\Projects\AfooTECH_Attendance_Management_System_Version_2\WindowsApplication2\obj\x86\Debug\WindowsApplication2.markAttendance.resources
+C:\Users\Admin\Documents\Visual Studio 2010\Projects\AfooTECH_Attendance_Management_System_Version_2\WindowsApplication2\obj\x86\Debug\WindowsApplication2.regStudent.resources
+C:\Users\Admin\Documents\Visual Studio 2010\Projects\AfooTECH_Attendance_Management_System_Version_2\WindowsApplication2\obj\x86\Debug\WindowsApplication2.regstudentfingerprint.resources
+C:\Users\Admin\Documents\Visual Studio 2010\Projects\AfooTECH_Attendance_Management_System_Version_2\WindowsApplication2\obj\x86\Debug\WindowsApplication2.setChangePassword.resources
+C:\Users\Admin\Documents\Visual Studio 2010\Projects\AfooTECH_Attendance_Management_System_Version_2\WindowsApplication2\obj\x86\Debug\WindowsApplication2.studentRecords.resources
+C:\Users\Admin\Documents\Visual Studio 2010\Projects\AfooTECH_Attendance_Management_System_Version_2\WindowsApplication2\obj\x86\Debug\WindowsApplication2.systemSettings.resources
+C:\Users\Admin\Documents\Visual Studio 2010\Projects\AfooTECH_Attendance_Management_System_Version_2\WindowsApplication2\obj\x86\Debug\WindowsApplication2.viewadminrecord.resources
+C:\Users\Admin\Documents\Visual Studio 2010\Projects\AfooTECH_Attendance_Management_System_Version_2\WindowsApplication2\obj\x86\Debug\WindowsApplication2.index.resources
+C:\Users\Admin\Documents\Visual Studio 2010\Projects\AfooTECH_Attendance_Management_System_Version_2\WindowsApplication2\obj\x86\Debug\WindowsApplication2.main.resources
+C:\Users\Admin\Documents\Visual Studio 2010\Projects\AfooTECH_Attendance_Management_System_Version_2\WindowsApplication2\obj\x86\Debug\WindowsApplication2.Resources.resources
+C:\Users\Admin\Documents\Visual Studio 2010\Projects\AfooTECH_Attendance_Management_System_Version_2\WindowsApplication2\obj\x86\Debug\WindowsApplication2.overlay.resources
+C:\Users\Admin\Documents\Visual Studio 2010\Projects\AfooTECH_Attendance_Management_System_Version_2\WindowsApplication2\obj\x86\Debug\WindowsApplication2.vbproj.GenerateResource.Cache
+C:\xampp\htdocs\AfooTECH_Attendance_Management_System_Version_2\WindowsApplication2\obj\x86\Debug\WindowsApplication2.exe
+C:\xampp\htdocs\AfooTECH_Attendance_Management_System_Version_2\WindowsApplication2\obj\x86\Debug\WindowsApplication2.xml
+C:\xampp\htdocs\AfooTECH_Attendance_Management_System_Version_2\WindowsApplication2\obj\x86\Debug\WindowsApplication2.pdb
+C:\xampp\htdocs\AfooTECH_Attendance_Management_System_Version_2\WindowsApplication2\bin\Debug\bg-1.jpg
+C:\xampp\htdocs\AfooTECH_Attendance_Management_System_Version_2\WindowsApplication2\bin\Debug\WindowsApplication2.exe
+C:\xampp\htdocs\AfooTECH_Attendance_Management_System_Version_2\WindowsApplication2\bin\Debug\WindowsApplication2.pdb
+C:\xampp\htdocs\AfooTECH_Attendance_Management_System_Version_2\WindowsApplication2\bin\Debug\WindowsApplication2.xml
+C:\xampp\htdocs\AfooTECH_Attendance_Management_System_Version_2\WindowsApplication2\obj\x86\Debug\WindowsApplication2.vbprojResolveAssemblyReference.cache
+C:\xampp\htdocs\AfooTECH_Attendance_Management_System_Version_2\WindowsApplication2\obj\x86\Debug\WindowsApplication2.adminRecord.resources
+C:\xampp\htdocs\AfooTECH_Attendance_Management_System_Version_2\WindowsApplication2\obj\x86\Debug\WindowsApplication2.adminfinishresetpassword.resources
+C:\xampp\htdocs\AfooTECH_Attendance_Management_System_Version_2\WindowsApplication2\obj\x86\Debug\WindowsApplication2.adminportal.resources
+C:\xampp\htdocs\AfooTECH_Attendance_Management_System_Version_2\WindowsApplication2\obj\x86\Debug\WindowsApplication2.adminlogin.resources
+C:\xampp\htdocs\AfooTECH_Attendance_Management_System_Version_2\WindowsApplication2\obj\x86\Debug\WindowsApplication2.adminresetpassword.resources
+C:\xampp\htdocs\AfooTECH_Attendance_Management_System_Version_2\WindowsApplication2\obj\x86\Debug\WindowsApplication2.attendanceRecordForm.resources
+C:\xampp\htdocs\AfooTECH_Attendance_Management_System_Version_2\WindowsApplication2\obj\x86\Debug\WindowsApplication2.markAttendance.resources
+C:\xampp\htdocs\AfooTECH_Attendance_Management_System_Version_2\WindowsApplication2\obj\x86\Debug\WindowsApplication2.regStudent.resources
+C:\xampp\htdocs\AfooTECH_Attendance_Management_System_Version_2\WindowsApplication2\obj\x86\Debug\WindowsApplication2.regstudentfingerprint.resources
+C:\xampp\htdocs\AfooTECH_Attendance_Management_System_Version_2\WindowsApplication2\obj\x86\Debug\WindowsApplication2.setChangePassword.resources
+C:\xampp\htdocs\AfooTECH_Attendance_Management_System_Version_2\WindowsApplication2\obj\x86\Debug\WindowsApplication2.studentRecords.resources
+C:\xampp\htdocs\AfooTECH_Attendance_Management_System_Version_2\WindowsApplication2\obj\x86\Debug\WindowsApplication2.systemSettings.resources
+C:\xampp\htdocs\AfooTECH_Attendance_Management_System_Version_2\WindowsApplication2\obj\x86\Debug\WindowsApplication2.viewadminrecord.resources
+C:\xampp\htdocs\AfooTECH_Attendance_Management_System_Version_2\WindowsApplication2\obj\x86\Debug\WindowsApplication2.index.resources
+C:\xampp\htdocs\AfooTECH_Attendance_Management_System_Version_2\WindowsApplication2\obj\x86\Debug\WindowsApplication2.main.resources
+C:\xampp\htdocs\AfooTECH_Attendance_Management_System_Version_2\WindowsApplication2\obj\x86\Debug\WindowsApplication2.Resources.resources
+C:\xampp\htdocs\AfooTECH_Attendance_Management_System_Version_2\WindowsApplication2\obj\x86\Debug\WindowsApplication2.overlay.resources
+C:\xampp\htdocs\AfooTECH_Attendance_Management_System_Version_2\WindowsApplication2\obj\x86\Debug\WindowsApplication2.vbproj.GenerateResource.Cache

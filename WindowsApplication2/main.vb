@@ -13,7 +13,21 @@
         adminlogin.Show()
     End Sub
 
-    Private Sub main_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+    Private Sub checkInBtn_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles checkInBtn.Click
+        Dim attendForm As New markAttendance()
+        attendForm.AttendanceMode = "Check-In"
+        overlay.Show()
+        attendForm.Show()
+        'Me.Close()
+        'markAttendance.Show()
+    End Sub
 
+    Private Sub checkOutBtn_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles checkOutBtn.Click
+        Dim attendForm As New markAttendance()
+        attendForm.AttendanceMode = "Check-Out"
+        overlay.Show()
+        attendForm.Show()
+        'Me.Close()
+        'markAttendance.Show()
     End Sub
 End Class

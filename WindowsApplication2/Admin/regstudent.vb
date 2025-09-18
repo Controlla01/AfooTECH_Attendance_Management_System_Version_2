@@ -10,6 +10,7 @@ Public Class regStudent
     Dim videoDevices As FilterInfoCollection
     Dim videoSource As VideoCaptureDevice
     Dim capturedImage As Bitmap
+    Dim studentIdValue As String
 
     Private Sub close_btn_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles close_btn.Click
         If videoSource IsNot Nothing AndAlso videoSource.IsRunning Then
@@ -22,13 +23,12 @@ Public Class regStudent
 
     Private Sub regStudent_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         functions.getStudentID()
-        'functions.getStudentRole()
         functions.getStatus()
         functions.getProgramme()
         functions.getGender()
 
-        'Dim result = functions.allCounts
-        'total_staff_count_label_txt.Text = allCounts.item1.ToString
+        Dim result = functions.allCounts
+        totalStudentCountLabel.Text = result.item2.ToString
     End Sub
 
     Private Sub viewRecBtn_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles viewRecBtn.Click
@@ -45,28 +45,24 @@ Public Class regStudent
 
     Private Sub captureBtn_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles captureBtn.Click
         If studentProfilePic.Image IsNot Nothing Then
-            ' STOP the webcam to freeze the image
             If videoSource IsNot Nothing AndAlso videoSource.IsRunning Then
                 videoSource.SignalToStop()
                 videoSource.WaitForStop()
             End If
 
-            ' Define folder and filename
-            Dim folderPath As String = "C:\Users\Michael\Documents\Visual Studio 2010\Projects\AfooTECH_Attendance_Management_System\WindowsApplication2\capturedimages"
+            Dim folderPath As String = "C:\\capturedimages"
             If Not IO.Directory.Exists(folderPath) Then
                 IO.Directory.CreateDirectory(folderPath)
             End If
             Dim fileName As String = "capture_" & Now.ToString("yyyyMMdd_HHmmss") & ".jpg"
             Dim savePath As String = IO.Path.Combine(folderPath, fileName)
 
-            ' Save the image
             Using bmp As New Bitmap(studentProfilePic.Image)
                 bmp.Save(savePath, Imaging.ImageFormat.Jpeg)
             End Using
 
             MessageBox.Show("Image captured and saved to: " & savePath)
         Else
-
             MessageBox.Show("No image found to save.")
         End If
     End Sub
@@ -89,6 +85,7 @@ Public Class regStudent
 
         If fullNameTxt.Text = "" Or emailAddressTxt.Text = "" Or phoneNumberTxt.Text = "" Then
             MessageBox.Show("All Fields are Required!", "AfooTECH Attendance Management System", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Exit Sub
 
         ElseIf validateEmail(emailAddressTxt.Text) = False Then
             MessageBox.Show("Please Enter a valid Email Address to Continue!", "AfooTECH Attendance Management System", MessageBoxButtons.OK, MessageBoxIcon.Error)
@@ -104,13 +101,28 @@ Public Class regStudent
 
         ElseIf studentProfilePic.Image Is Nothing Then
             MessageBox.Show("Please Select a Passport to Continue!", "AfooTECH Attendance Management System", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Exit Sub
 
         Else
             If (studentProfileId.Text = "SELECT STUDENT.....") Then
                 response = MessageBox.Show("Are You Sure You Want to Save?", "AfooTECH Attendance Management System", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
                 If response = vbYes Then
                     If Not functions.vetEmail() Then
-                        functions.studentRegistration()
+
+                        ' Register and get student ID
+                        studentIdValue = functions.studentRegistration()
+
+                        If studentIdValue Is Nothing OrElse studentIdValue.Trim() = "" Then
+                            MessageBox.Show("ERROR: Could not retrieve Student ID after saving.", "AfooTECH Attendance Management System", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                            Exit Sub
+                        End If
+
+                        Dim fingerprintForm As New regstudentfingerprint()
+                        fingerprintForm.passedStudentId = studentIdValue
+                        fingerprintForm.passedEmail = emailAddressTxt.Text.Trim()
+                        overlay.Show()
+                        Me.Hide()
+                        fingerprintForm.Show()
                     End If
                 End If
 
@@ -127,14 +139,14 @@ Public Class regStudent
 
                     reader.Close()
                     functions.connection.Close()
-
                     functions.UpdateStudent()
                 End If
             End If
-        End If
 
-        'Dim updatedCounts = functions.allCounts()
-        'total_student_count_label_txt.Text = updatedCounts.Item1.ToString
+            Dim updatedCounts = functions.allCounts()
+            totalStudentCountLabel.Text = updatedCounts.Item2.ToString
+            adminportal.totalStudentLabel.Text = updatedCounts.Item2.ToString()
+        End If
     End Sub
 
     Private Sub fetch_btn_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles fetch_btn.Click
@@ -187,5 +199,4 @@ Public Class regStudent
     Private Sub clearBtn_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles clearBtn.Click
         functions.clearFunction()
     End Sub
-
 End Class

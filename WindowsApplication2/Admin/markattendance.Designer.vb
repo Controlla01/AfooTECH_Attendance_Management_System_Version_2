@@ -26,7 +26,6 @@ Partial Class markAttendance
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(markAttendance))
         Me.Guna2GroupBox3 = New Guna.UI2.WinForms.Guna2GroupBox()
         Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.fingerScanBtn = New Guna.UI2.WinForms.Guna2Button()
         Me.admin_profile_pic = New Guna.UI2.WinForms.Guna2PictureBox()
         Me.startScanBtn = New Guna.UI2.WinForms.Guna2Button()
         Me.Guna2GroupBox1 = New Guna.UI2.WinForms.Guna2GroupBox()
@@ -51,15 +50,6 @@ Partial Class markAttendance
         Me.time_label = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.Guna2GroupBox4 = New Guna.UI2.WinForms.Guna2GroupBox()
-        Me.markAttendanceRecordList = New System.Windows.Forms.ListView()
-        Me.ColumnHeader2 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.ColumnHeader1 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.ColumnHeader3 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.ColumnHeader4 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.ColumnHeader5 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.ColumnHeader7 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.lastResetLabel1 = New Guna.UI2.WinForms.Guna2HtmlLabel()
-        Me.lastResetLabel = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Me.Guna2GroupBox3.SuspendLayout()
         Me.Panel2.SuspendLayout()
         CType(Me.admin_profile_pic, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -79,7 +69,7 @@ Partial Class markAttendance
         Me.Guna2GroupBox3.Controls.Add(Me.startScanBtn)
         Me.Guna2GroupBox3.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
         Me.Guna2GroupBox3.ForeColor = System.Drawing.Color.Black
-        Me.Guna2GroupBox3.Location = New System.Drawing.Point(12, 467)
+        Me.Guna2GroupBox3.Location = New System.Drawing.Point(11, 247)
         Me.Guna2GroupBox3.Name = "Guna2GroupBox3"
         Me.Guna2GroupBox3.ShadowDecoration.Parent = Me.Guna2GroupBox3
         Me.Guna2GroupBox3.Size = New System.Drawing.Size(314, 238)
@@ -88,33 +78,11 @@ Partial Class markAttendance
         '
         'Panel2
         '
-        Me.Panel2.Controls.Add(Me.fingerScanBtn)
         Me.Panel2.Controls.Add(Me.admin_profile_pic)
         Me.Panel2.Location = New System.Drawing.Point(21, 48)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(268, 183)
         Me.Panel2.TabIndex = 5
-        '
-        'fingerScanBtn
-        '
-        Me.fingerScanBtn.BackColor = System.Drawing.SystemColors.Control
-        Me.fingerScanBtn.BorderColor = System.Drawing.Color.Transparent
-        Me.fingerScanBtn.BorderRadius = 5
-        Me.fingerScanBtn.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom
-        Me.fingerScanBtn.CheckedState.Parent = Me.fingerScanBtn
-        Me.fingerScanBtn.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.fingerScanBtn.CustomBorderColor = System.Drawing.Color.Transparent
-        Me.fingerScanBtn.CustomImages.Parent = Me.fingerScanBtn
-        Me.fingerScanBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.fingerScanBtn.ForeColor = System.Drawing.Color.White
-        Me.fingerScanBtn.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.fingerScanBtn.HoverState.Parent = Me.fingerScanBtn
-        Me.fingerScanBtn.Location = New System.Drawing.Point(22, 133)
-        Me.fingerScanBtn.Name = "fingerScanBtn"
-        Me.fingerScanBtn.ShadowDecoration.Parent = Me.fingerScanBtn
-        Me.fingerScanBtn.Size = New System.Drawing.Size(222, 42)
-        Me.fingerScanBtn.TabIndex = 6
-        Me.fingerScanBtn.Text = "SCAN FINGER"
         '
         'admin_profile_pic
         '
@@ -126,7 +94,7 @@ Partial Class markAttendance
         Me.admin_profile_pic.Location = New System.Drawing.Point(22, 11)
         Me.admin_profile_pic.Name = "admin_profile_pic"
         Me.admin_profile_pic.ShadowDecoration.Parent = Me.admin_profile_pic
-        Me.admin_profile_pic.Size = New System.Drawing.Size(222, 114)
+        Me.admin_profile_pic.Size = New System.Drawing.Size(222, 158)
         Me.admin_profile_pic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.admin_profile_pic.TabIndex = 0
         Me.admin_profile_pic.TabStop = False
@@ -165,7 +133,7 @@ Partial Class markAttendance
         Me.Guna2GroupBox1.Controls.Add(Me.fullNameTxt)
         Me.Guna2GroupBox1.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
         Me.Guna2GroupBox1.ForeColor = System.Drawing.Color.Black
-        Me.Guna2GroupBox1.Location = New System.Drawing.Point(12, 52)
+        Me.Guna2GroupBox1.Location = New System.Drawing.Point(12, 58)
         Me.Guna2GroupBox1.Name = "Guna2GroupBox1"
         Me.Guna2GroupBox1.ShadowDecoration.Parent = Me.Guna2GroupBox1
         Me.Guna2GroupBox1.Size = New System.Drawing.Size(489, 172)
@@ -177,7 +145,7 @@ Partial Class markAttendance
         Me.markAttendanceStatusLabel.BackColor = System.Drawing.Color.Transparent
         Me.markAttendanceStatusLabel.Font = New System.Drawing.Font("Segoe UI", 8.0!, System.Drawing.FontStyle.Bold)
         Me.markAttendanceStatusLabel.ForeColor = System.Drawing.Color.Black
-        Me.markAttendanceStatusLabel.Location = New System.Drawing.Point(299, 143)
+        Me.markAttendanceStatusLabel.Location = New System.Drawing.Point(278, 143)
         Me.markAttendanceStatusLabel.Name = "markAttendanceStatusLabel"
         Me.markAttendanceStatusLabel.Size = New System.Drawing.Size(35, 15)
         Me.markAttendanceStatusLabel.TabIndex = 33
@@ -188,18 +156,18 @@ Partial Class markAttendance
         Me.markAttendanceTimeSlot.BackColor = System.Drawing.Color.Transparent
         Me.markAttendanceTimeSlot.Font = New System.Drawing.Font("Segoe UI", 8.0!, System.Drawing.FontStyle.Bold)
         Me.markAttendanceTimeSlot.ForeColor = System.Drawing.Color.Black
-        Me.markAttendanceTimeSlot.Location = New System.Drawing.Point(299, 83)
+        Me.markAttendanceTimeSlot.Location = New System.Drawing.Point(278, 83)
         Me.markAttendanceTimeSlot.Name = "markAttendanceTimeSlot"
-        Me.markAttendanceTimeSlot.Size = New System.Drawing.Size(51, 15)
+        Me.markAttendanceTimeSlot.Size = New System.Drawing.Size(31, 15)
         Me.markAttendanceTimeSlot.TabIndex = 32
-        Me.markAttendanceTimeSlot.Text = "Time Slot"
+        Me.markAttendanceTimeSlot.Text = "-------"
         '
         'Guna2HtmlLabel7
         '
         Me.Guna2HtmlLabel7.BackColor = System.Drawing.Color.Transparent
         Me.Guna2HtmlLabel7.Font = New System.Drawing.Font("Segoe UI", 8.0!, System.Drawing.FontStyle.Bold)
         Me.Guna2HtmlLabel7.ForeColor = System.Drawing.Color.Black
-        Me.Guna2HtmlLabel7.Location = New System.Drawing.Point(299, 120)
+        Me.Guna2HtmlLabel7.Location = New System.Drawing.Point(278, 120)
         Me.Guna2HtmlLabel7.Name = "Guna2HtmlLabel7"
         Me.Guna2HtmlLabel7.Size = New System.Drawing.Size(38, 15)
         Me.Guna2HtmlLabel7.TabIndex = 31
@@ -232,7 +200,7 @@ Partial Class markAttendance
         Me.Guna2HtmlLabel6.BackColor = System.Drawing.Color.Transparent
         Me.Guna2HtmlLabel6.Font = New System.Drawing.Font("Segoe UI", 8.0!, System.Drawing.FontStyle.Bold)
         Me.Guna2HtmlLabel6.ForeColor = System.Drawing.Color.Black
-        Me.Guna2HtmlLabel6.Location = New System.Drawing.Point(299, 60)
+        Me.Guna2HtmlLabel6.Location = New System.Drawing.Point(278, 60)
         Me.Guna2HtmlLabel6.Name = "Guna2HtmlLabel6"
         Me.Guna2HtmlLabel6.Size = New System.Drawing.Size(54, 15)
         Me.Guna2HtmlLabel6.TabIndex = 29
@@ -261,7 +229,7 @@ Partial Class markAttendance
         Me.emailAddressTxt.PlaceholderText = "EMAIL ADDRESS"
         Me.emailAddressTxt.SelectedText = ""
         Me.emailAddressTxt.ShadowDecoration.Parent = Me.emailAddressTxt
-        Me.emailAddressTxt.Size = New System.Drawing.Size(271, 38)
+        Me.emailAddressTxt.Size = New System.Drawing.Size(255, 38)
         Me.emailAddressTxt.TabIndex = 21
         '
         'fullNameTxt
@@ -286,7 +254,7 @@ Partial Class markAttendance
         Me.fullNameTxt.PlaceholderText = "FULLNAME"
         Me.fullNameTxt.SelectedText = ""
         Me.fullNameTxt.ShadowDecoration.Parent = Me.fullNameTxt
-        Me.fullNameTxt.Size = New System.Drawing.Size(271, 38)
+        Me.fullNameTxt.Size = New System.Drawing.Size(257, 38)
         Me.fullNameTxt.TabIndex = 20
         '
         'Guna2GroupBox2
@@ -295,10 +263,10 @@ Partial Class markAttendance
         Me.Guna2GroupBox2.Controls.Add(Me.markAttendanceProfilePic)
         Me.Guna2GroupBox2.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
         Me.Guna2GroupBox2.ForeColor = System.Drawing.Color.Black
-        Me.Guna2GroupBox2.Location = New System.Drawing.Point(529, 467)
+        Me.Guna2GroupBox2.Location = New System.Drawing.Point(518, 247)
         Me.Guna2GroupBox2.Name = "Guna2GroupBox2"
         Me.Guna2GroupBox2.ShadowDecoration.Parent = Me.Guna2GroupBox2
-        Me.Guna2GroupBox2.Size = New System.Drawing.Size(232, 238)
+        Me.Guna2GroupBox2.Size = New System.Drawing.Size(242, 238)
         Me.Guna2GroupBox2.TabIndex = 20
         Me.Guna2GroupBox2.Text = "Profile Picture"
         '
@@ -309,7 +277,7 @@ Partial Class markAttendance
         Me.markAttendanceProfilePic.BorderRadius = 5
         Me.markAttendanceProfilePic.Cursor = System.Windows.Forms.Cursors.Hand
         Me.markAttendanceProfilePic.Image = Global.WindowsApplication2.My.Resources.Resources.Oxygen_Icons_org_Oxygen_Places_user_identity1
-        Me.markAttendanceProfilePic.Location = New System.Drawing.Point(16, 49)
+        Me.markAttendanceProfilePic.Location = New System.Drawing.Point(22, 49)
         Me.markAttendanceProfilePic.Name = "markAttendanceProfilePic"
         Me.markAttendanceProfilePic.ShadowDecoration.Parent = Me.markAttendanceProfilePic
         Me.markAttendanceProfilePic.Size = New System.Drawing.Size(202, 178)
@@ -443,90 +411,18 @@ Partial Class markAttendance
         Me.Guna2GroupBox4.Controls.Add(Me.Guna2Panel3)
         Me.Guna2GroupBox4.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
         Me.Guna2GroupBox4.ForeColor = System.Drawing.Color.Black
-        Me.Guna2GroupBox4.Location = New System.Drawing.Point(518, 53)
+        Me.Guna2GroupBox4.Location = New System.Drawing.Point(518, 59)
         Me.Guna2GroupBox4.Name = "Guna2GroupBox4"
         Me.Guna2GroupBox4.ShadowDecoration.Parent = Me.Guna2GroupBox4
         Me.Guna2GroupBox4.Size = New System.Drawing.Size(242, 171)
         Me.Guna2GroupBox4.TabIndex = 21
         Me.Guna2GroupBox4.Text = "Current Tme And Date"
         '
-        'markAttendanceRecordList
-        '
-        Me.markAttendanceRecordList.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader2, Me.ColumnHeader1, Me.ColumnHeader3, Me.ColumnHeader4, Me.ColumnHeader5, Me.ColumnHeader7})
-        Me.markAttendanceRecordList.FullRowSelect = True
-        Me.markAttendanceRecordList.GridLines = True
-        Me.markAttendanceRecordList.Location = New System.Drawing.Point(12, 230)
-        Me.markAttendanceRecordList.Name = "markAttendanceRecordList"
-        Me.markAttendanceRecordList.Size = New System.Drawing.Size(748, 231)
-        Me.markAttendanceRecordList.TabIndex = 27
-        Me.markAttendanceRecordList.UseCompatibleStateImageBehavior = False
-        Me.markAttendanceRecordList.View = System.Windows.Forms.View.Details
-        '
-        'ColumnHeader2
-        '
-        Me.ColumnHeader2.Text = "S/N"
-        Me.ColumnHeader2.Width = 50
-        '
-        'ColumnHeader1
-        '
-        Me.ColumnHeader1.Text = "FULLNAME"
-        Me.ColumnHeader1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        Me.ColumnHeader1.Width = 120
-        '
-        'ColumnHeader3
-        '
-        Me.ColumnHeader3.Text = "DATE"
-        Me.ColumnHeader3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        Me.ColumnHeader3.Width = 150
-        '
-        'ColumnHeader4
-        '
-        Me.ColumnHeader4.Text = "DAY"
-        Me.ColumnHeader4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        Me.ColumnHeader4.Width = 150
-        '
-        'ColumnHeader5
-        '
-        Me.ColumnHeader5.Text = "TIME-IN"
-        Me.ColumnHeader5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        Me.ColumnHeader5.Width = 150
-        '
-        'ColumnHeader7
-        '
-        Me.ColumnHeader7.Text = "TIME-OUT"
-        Me.ColumnHeader7.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        Me.ColumnHeader7.Width = 150
-        '
-        'lastResetLabel1
-        '
-        Me.lastResetLabel1.BackColor = System.Drawing.Color.Transparent
-        Me.lastResetLabel1.Font = New System.Drawing.Font("Segoe UI", 8.0!, System.Drawing.FontStyle.Bold)
-        Me.lastResetLabel1.ForeColor = System.Drawing.Color.Black
-        Me.lastResetLabel1.Location = New System.Drawing.Point(371, 467)
-        Me.lastResetLabel1.Name = "lastResetLabel1"
-        Me.lastResetLabel1.Size = New System.Drawing.Size(89, 15)
-        Me.lastResetLabel1.TabIndex = 30
-        Me.lastResetLabel1.Text = "Table Last Reset:"
-        '
-        'lastResetLabel
-        '
-        Me.lastResetLabel.BackColor = System.Drawing.Color.Transparent
-        Me.lastResetLabel.Font = New System.Drawing.Font("Segoe UI", 8.0!, System.Drawing.FontStyle.Bold)
-        Me.lastResetLabel.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.lastResetLabel.Location = New System.Drawing.Point(371, 488)
-        Me.lastResetLabel.Name = "lastResetLabel"
-        Me.lastResetLabel.Size = New System.Drawing.Size(119, 15)
-        Me.lastResetLabel.TabIndex = 31
-        Me.lastResetLabel.Text = "Last Reset Time: --:--:--"
-        '
         'markAttendance
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(772, 717)
-        Me.Controls.Add(Me.lastResetLabel)
-        Me.Controls.Add(Me.lastResetLabel1)
-        Me.Controls.Add(Me.markAttendanceRecordList)
+        Me.ClientSize = New System.Drawing.Size(772, 503)
         Me.Controls.Add(Me.Guna2GroupBox4)
         Me.Controls.Add(Me.Guna2GroupBox3)
         Me.Controls.Add(Me.Guna2Panel1)
@@ -552,7 +448,6 @@ Partial Class markAttendance
         Me.Guna2Panel3.PerformLayout()
         Me.Guna2GroupBox4.ResumeLayout(False)
         Me.ResumeLayout(False)
-        Me.PerformLayout()
 
     End Sub
     Friend WithEvents Guna2GroupBox3 As Guna.UI2.WinForms.Guna2GroupBox
@@ -581,14 +476,4 @@ Partial Class markAttendance
     Friend WithEvents Guna2HtmlLabel3 As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents markAttendanceStatusLabel As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents markAttendanceTimeSlot As Guna.UI2.WinForms.Guna2HtmlLabel
-    Friend WithEvents fingerScanBtn As Guna.UI2.WinForms.Guna2Button
-    Friend WithEvents markAttendanceRecordList As System.Windows.Forms.ListView
-    Friend WithEvents ColumnHeader2 As System.Windows.Forms.ColumnHeader
-    Friend WithEvents ColumnHeader1 As System.Windows.Forms.ColumnHeader
-    Friend WithEvents ColumnHeader3 As System.Windows.Forms.ColumnHeader
-    Friend WithEvents ColumnHeader4 As System.Windows.Forms.ColumnHeader
-    Friend WithEvents ColumnHeader5 As System.Windows.Forms.ColumnHeader
-    Friend WithEvents ColumnHeader7 As System.Windows.Forms.ColumnHeader
-    Friend WithEvents lastResetLabel1 As Guna.UI2.WinForms.Guna2HtmlLabel
-    Friend WithEvents lastResetLabel As Guna.UI2.WinForms.Guna2HtmlLabel
 End Class

@@ -32,10 +32,6 @@ Partial Class attendanceRecordForm
         Me.ColumnHeader6 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ColumnHeader7 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ColumnHeader8 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.ColumnHeader9 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.ColumnHeader10 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.ColumnHeader11 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.ColumnHeader12 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.Guna2Panel2 = New Guna.UI2.WinForms.Guna2Panel()
         Me.searchBtn = New Guna.UI2.WinForms.Guna2Button()
         Me.attendanceDatePicker = New Guna.UI2.WinForms.Guna2DateTimePicker()
@@ -47,6 +43,7 @@ Partial Class attendanceRecordForm
         Me.full_name_txt = New Guna.UI2.WinForms.Guna2TextBox()
         Me.user_record_history = New System.Windows.Forms.ListView()
         Me.refreshBtn = New Guna.UI2.WinForms.Guna2Button()
+        Me.generatePdfBtn = New Guna.UI2.WinForms.Guna2Button()
         Me.Guna2Panel2.SuspendLayout()
         Me.Guna2Panel1.SuspendLayout()
         CType(Me.Guna2PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -54,7 +51,7 @@ Partial Class attendanceRecordForm
         '
         'attendanceListView
         '
-        Me.attendanceListView.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader2, Me.ColumnHeader1, Me.ColumnHeader3, Me.ColumnHeader4, Me.ColumnHeader5, Me.ColumnHeader6, Me.ColumnHeader7, Me.ColumnHeader8, Me.ColumnHeader9, Me.ColumnHeader10, Me.ColumnHeader11, Me.ColumnHeader12})
+        Me.attendanceListView.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader2, Me.ColumnHeader1, Me.ColumnHeader3, Me.ColumnHeader4, Me.ColumnHeader5, Me.ColumnHeader6, Me.ColumnHeader7, Me.ColumnHeader8})
         Me.attendanceListView.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.attendanceListView.FullRowSelect = True
         Me.attendanceListView.GridLines = True
@@ -72,7 +69,7 @@ Partial Class attendanceRecordForm
         '
         'ColumnHeader1
         '
-        Me.ColumnHeader1.Text = "STUDENT_ID"
+        Me.ColumnHeader1.Text = "STUDENT ID"
         Me.ColumnHeader1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.ColumnHeader1.Width = 120
         '
@@ -84,49 +81,33 @@ Partial Class attendanceRecordForm
         '
         'ColumnHeader4
         '
-        Me.ColumnHeader4.Text = "EMAIL ADDRESS"
+        Me.ColumnHeader4.Text = "EMAIL ADDRESS "
         Me.ColumnHeader4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.ColumnHeader4.Width = 150
         '
         'ColumnHeader5
         '
-        Me.ColumnHeader5.Text = "GENDER"
+        Me.ColumnHeader5.Text = "ATTENDANCE DATE"
         Me.ColumnHeader5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.ColumnHeader5.Width = 150
         '
         'ColumnHeader6
         '
-        Me.ColumnHeader6.Text = "PHONE NUMBER"
+        Me.ColumnHeader6.Text = "CHECK - IN"
         Me.ColumnHeader6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.ColumnHeader6.Width = 150
         '
         'ColumnHeader7
         '
-        Me.ColumnHeader7.Text = "HOME ADDRESS"
+        Me.ColumnHeader7.Text = "CHECK - OUT"
         Me.ColumnHeader7.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.ColumnHeader7.Width = 150
         '
         'ColumnHeader8
         '
-        Me.ColumnHeader8.Text = "PASSPORT"
+        Me.ColumnHeader8.Text = "CLOCK STATUS"
         Me.ColumnHeader8.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.ColumnHeader8.Width = 150
-        '
-        'ColumnHeader9
-        '
-        Me.ColumnHeader9.Text = "COURSE"
-        '
-        'ColumnHeader10
-        '
-        Me.ColumnHeader10.Text = "DATE"
-        '
-        'ColumnHeader11
-        '
-        Me.ColumnHeader11.Text = "CHECK IN"
-        '
-        'ColumnHeader12
-        '
-        Me.ColumnHeader12.Text = "CHECK OUT"
         '
         'Guna2Panel2
         '
@@ -168,6 +149,7 @@ Partial Class attendanceRecordForm
         '
         Me.attendanceDatePicker.BorderRadius = 5
         Me.attendanceDatePicker.CheckedState.Parent = Me.attendanceDatePicker
+        Me.attendanceDatePicker.Cursor = System.Windows.Forms.Cursors.Hand
         Me.attendanceDatePicker.FillColor = System.Drawing.Color.White
         Me.attendanceDatePicker.Format = System.Windows.Forms.DateTimePickerFormat.[Long]
         Me.attendanceDatePicker.HoverState.Parent = Me.attendanceDatePicker
@@ -199,7 +181,7 @@ Partial Class attendanceRecordForm
         Me.attendanceSearchTxt.Location = New System.Drawing.Point(15, 7)
         Me.attendanceSearchTxt.Name = "attendanceSearchTxt"
         Me.attendanceSearchTxt.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.attendanceSearchTxt.PlaceholderText = "Type Full Name"
+        Me.attendanceSearchTxt.PlaceholderText = "Type Email Address"
         Me.attendanceSearchTxt.SelectedText = ""
         Me.attendanceSearchTxt.ShadowDecoration.Parent = Me.attendanceSearchTxt
         Me.attendanceSearchTxt.Size = New System.Drawing.Size(202, 38)
@@ -322,11 +304,33 @@ Partial Class attendanceRecordForm
         Me.refreshBtn.TabIndex = 24
         Me.refreshBtn.Text = "REFRESH"
         '
+        'generatePdfBtn
+        '
+        Me.generatePdfBtn.BackColor = System.Drawing.SystemColors.Control
+        Me.generatePdfBtn.BorderColor = System.Drawing.Color.Transparent
+        Me.generatePdfBtn.BorderRadius = 5
+        Me.generatePdfBtn.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom
+        Me.generatePdfBtn.CheckedState.Parent = Me.generatePdfBtn
+        Me.generatePdfBtn.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.generatePdfBtn.CustomBorderColor = System.Drawing.Color.Transparent
+        Me.generatePdfBtn.CustomImages.Parent = Me.generatePdfBtn
+        Me.generatePdfBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.generatePdfBtn.ForeColor = System.Drawing.Color.White
+        Me.generatePdfBtn.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.generatePdfBtn.HoverState.Parent = Me.generatePdfBtn
+        Me.generatePdfBtn.Location = New System.Drawing.Point(456, 519)
+        Me.generatePdfBtn.Name = "generatePdfBtn"
+        Me.generatePdfBtn.ShadowDecoration.Parent = Me.generatePdfBtn
+        Me.generatePdfBtn.Size = New System.Drawing.Size(138, 38)
+        Me.generatePdfBtn.TabIndex = 30
+        Me.generatePdfBtn.Text = "GENERATE PDF"
+        '
         'attendanceRecordForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(609, 569)
+        Me.Controls.Add(Me.generatePdfBtn)
         Me.Controls.Add(Me.refreshBtn)
         Me.Controls.Add(Me.attendanceListView)
         Me.Controls.Add(Me.Guna2Panel2)
@@ -361,11 +365,8 @@ Partial Class attendanceRecordForm
     Friend WithEvents attendanceDatePicker As Guna.UI2.WinForms.Guna2DateTimePicker
     Friend WithEvents attendanceSearchTxt As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents searchBtn As Guna.UI2.WinForms.Guna2Button
-    Friend WithEvents ColumnHeader9 As System.Windows.Forms.ColumnHeader
-    Friend WithEvents ColumnHeader10 As System.Windows.Forms.ColumnHeader
-    Friend WithEvents ColumnHeader11 As System.Windows.Forms.ColumnHeader
-    Friend WithEvents ColumnHeader12 As System.Windows.Forms.ColumnHeader
     Friend WithEvents full_name_txt As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents user_record_history As System.Windows.Forms.ListView
     Friend WithEvents refreshBtn As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents generatePdfBtn As Guna.UI2.WinForms.Guna2Button
 End Class

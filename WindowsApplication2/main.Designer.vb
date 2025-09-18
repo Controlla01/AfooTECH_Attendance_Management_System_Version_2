@@ -26,6 +26,10 @@ Partial Class main
         Me.Guna2HtmlLabel1 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Me.admin_btn = New Guna.UI2.WinForms.Guna2Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.checkOutBtn = New Guna.UI2.WinForms.Guna2Button()
+        Me.checkInBtn = New Guna.UI2.WinForms.Guna2Button()
+        Me.Guna2HtmlLabel3 = New Guna.UI2.WinForms.Guna2HtmlLabel()
+        Me.Guna2HtmlLabel2 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -50,7 +54,7 @@ Partial Class main
         Me.admin_btn.ForeColor = System.Drawing.Color.White
         Me.admin_btn.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.admin_btn.HoverState.Parent = Me.admin_btn
-        Me.admin_btn.Location = New System.Drawing.Point(454, 325)
+        Me.admin_btn.Location = New System.Drawing.Point(463, 325)
         Me.admin_btn.Name = "admin_btn"
         Me.admin_btn.ShadowDecoration.Parent = Me.admin_btn
         Me.admin_btn.Size = New System.Drawing.Size(149, 47)
@@ -67,11 +71,71 @@ Partial Class main
         Me.PictureBox1.TabIndex = 6
         Me.PictureBox1.TabStop = False
         '
+        'checkOutBtn
+        '
+        Me.checkOutBtn.BorderRadius = 5
+        Me.checkOutBtn.CheckedState.Parent = Me.checkOutBtn
+        Me.checkOutBtn.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.checkOutBtn.CustomImages.Parent = Me.checkOutBtn
+        Me.checkOutBtn.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.checkOutBtn.ForeColor = System.Drawing.Color.White
+        Me.checkOutBtn.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.checkOutBtn.HoverState.Parent = Me.checkOutBtn
+        Me.checkOutBtn.Location = New System.Drawing.Point(695, 325)
+        Me.checkOutBtn.Name = "checkOutBtn"
+        Me.checkOutBtn.ShadowDecoration.Parent = Me.checkOutBtn
+        Me.checkOutBtn.Size = New System.Drawing.Size(149, 47)
+        Me.checkOutBtn.TabIndex = 7
+        Me.checkOutBtn.Text = "Check-Out"
+        '
+        'checkInBtn
+        '
+        Me.checkInBtn.BorderRadius = 5
+        Me.checkInBtn.CheckedState.Parent = Me.checkInBtn
+        Me.checkInBtn.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.checkInBtn.CustomImages.Parent = Me.checkInBtn
+        Me.checkInBtn.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.checkInBtn.ForeColor = System.Drawing.Color.White
+        Me.checkInBtn.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.checkInBtn.HoverState.Parent = Me.checkInBtn
+        Me.checkInBtn.Location = New System.Drawing.Point(234, 327)
+        Me.checkInBtn.Name = "checkInBtn"
+        Me.checkInBtn.ShadowDecoration.Parent = Me.checkInBtn
+        Me.checkInBtn.Size = New System.Drawing.Size(149, 47)
+        Me.checkInBtn.TabIndex = 8
+        Me.checkInBtn.Text = "Check-In"
+        '
+        'Guna2HtmlLabel3
+        '
+        Me.Guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent
+        Me.Guna2HtmlLabel3.Font = New System.Drawing.Font("Microsoft Sans Serif", 30.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Guna2HtmlLabel3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.Guna2HtmlLabel3.Location = New System.Drawing.Point(643, 325)
+        Me.Guna2HtmlLabel3.Name = "Guna2HtmlLabel3"
+        Me.Guna2HtmlLabel3.Size = New System.Drawing.Size(14, 48)
+        Me.Guna2HtmlLabel3.TabIndex = 10
+        Me.Guna2HtmlLabel3.Text = "|"
+        '
+        'Guna2HtmlLabel2
+        '
+        Me.Guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent
+        Me.Guna2HtmlLabel2.Font = New System.Drawing.Font("Microsoft Sans Serif", 30.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Guna2HtmlLabel2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.Guna2HtmlLabel2.Location = New System.Drawing.Point(422, 324)
+        Me.Guna2HtmlLabel2.Name = "Guna2HtmlLabel2"
+        Me.Guna2HtmlLabel2.Size = New System.Drawing.Size(14, 48)
+        Me.Guna2HtmlLabel2.TabIndex = 11
+        Me.Guna2HtmlLabel2.Text = "|"
+        '
         'main
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1075, 484)
+        Me.Controls.Add(Me.Guna2HtmlLabel2)
+        Me.Controls.Add(Me.Guna2HtmlLabel3)
+        Me.Controls.Add(Me.checkInBtn)
+        Me.Controls.Add(Me.checkOutBtn)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.admin_btn)
         Me.Controls.Add(Me.Guna2HtmlLabel1)
@@ -90,4 +154,8 @@ Partial Class main
     Friend WithEvents Guna2HtmlLabel1 As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents admin_btn As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
+    Friend WithEvents checkOutBtn As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents checkInBtn As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents Guna2HtmlLabel3 As Guna.UI2.WinForms.Guna2HtmlLabel
+    Friend WithEvents Guna2HtmlLabel2 As Guna.UI2.WinForms.Guna2HtmlLabel
 End Class

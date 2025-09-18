@@ -11,7 +11,7 @@ Module functions
     Public loginStudentId As String
 
     Function connection()
-        Dim conn As New MySqlConnection("server=localhost;userid=root;password=;database=afootechattendancedb")
+        Dim conn As New MySqlConnection("server=localhost;userid=root;password=;database=afootech_attendance_db")
         Return conn
     End Function
 
@@ -160,7 +160,7 @@ Module functions
         regStudentfingerprint.studentProfilePic.Image = Nothing
         regstudentfingerprint.studentFingerPrintTemplate.Image = Nothing
 
-        regstudentfingerprint.scanProgressBar.Value = 0
+        regstudentfingerprint.enrollProgressBar.Value = 0
         regstudentfingerprint.enrollStatusLabel.Text = "Click Enroll Button To Begin"
 
 
@@ -177,8 +177,9 @@ Module functions
         Dim fullName = reader("fullName")
         Dim lastLogin = reader("lastLogin")
         Dim arrimage() As Byte = reader("passport")
+        Dim password = reader("password")
         connection.close()
-        Return Tuple.Create(fullName, lastLogin, arrimage)
+        Return Tuple.Create(fullName, lastLogin, arrimage, password)
     End Function
 
     Function getStudentProfile(ByVal studentId As String)
@@ -196,13 +197,13 @@ Module functions
             Dim fullName As String = reader("fullName").ToString()
             Dim emailAddress As String = reader("emailAddress").ToString()
             Dim phoneNumber As String = reader("phoneNumber").ToString()
-            Dim gender As String = reader("gender").ToString()
-            Dim programme As String = reader("programme").ToString()
+            Dim genderId As String = reader("genderId").ToString()
+            Dim programmeId As String = reader("programmeId").ToString()
             Dim statusId As String = reader("statusId").ToString()
             Dim roleId As String = reader("RoleId").ToString()
-            Dim arrimage() As Byte = reader("passport")
+            Dim arrimage() As Byte = CType(reader("passport"), Byte())
 
-            Return Tuple.Create(fullName, emailAddress, phoneNumber, gender, programme, roleId, statusId, arrimage)
+            Return Tuple.Create(fullName, emailAddress, phoneNumber, genderId, programmeId, roleId, statusId, arrimage)
         Else
             Throw New Exception("Student profile not found.")
         End If
@@ -374,22 +375,38 @@ Public Sub getStudentID()
             Dim connection = functions.connection
             connection.Open()
             command = New MySqlCommand("SELECT * FROM setup_fingers_tab", connection)
-            DT.Load(command.ExecuteReader)
+            DT.Load(command.ExecuteReader())
             connection.Close()
 
             Dim defaultRow As DataRow = DT.NewRow()
-            defaultRow("fingerId") = 0
+            defaultRow("fingerId") = "0"
             defaultRow("fingerLabel") = "SELECT FINGER"
             DT.Rows.InsertAt(defaultRow, 0)
 
-            regstudentfingerprint.selectFingerComboBox.DataSource = DT
-            regstudentfingerprint.selectFingerComboBox.DisplayMember = "fingerLabel"
-            regstudentfingerprint.selectFingerComboBox.ValueMember = "fingerId"
+            ' Check if regstudentfingerprint form is open and update ComboBox
+            Dim fingerForm As regstudentfingerprint = Nothing
+
+            For Each frm As Form In Application.OpenForms
+                If TypeOf frm Is regstudentfingerprint Then
+                    fingerForm = CType(frm, regstudentfingerprint)
+                    Exit For
+                End If
+            Next
+
+            If fingerForm IsNot Nothing Then
+                fingerForm.selectFingerComboBox.DataSource = DT
+                fingerForm.selectFingerComboBox.DisplayMember = "fingerLabel"
+                fingerForm.selectFingerComboBox.ValueMember = "fingerId"
+
+                If fingerForm.selectFingerComboBox.Items.Count > 0 Then
+                    fingerForm.selectFingerComboBox.SelectedIndex = 0
+                End If
+            End If
+
         Catch ex As Exception
             MessageBox.Show("An error occurred while loading finger: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
     End Sub
-
 
     Function passportSave(ByVal passportBox)
         Dim arrimage() As Byte
@@ -459,7 +476,6 @@ Public Sub getStudentID()
         Try
             Dim connection As MySql.Data.MySqlClient.MySqlConnection = functions.connection
             Dim command As New MySqlCommand("SELECT a.*, b.statusName, c.roleName FROM staff_tab a, setup_status_tab b, setup_role_tab c WHERE a.statusId = b.statusId AND a.roleId = c.roleId AND a.roleId > 1;", connection)
-            'command.Parameters.AddWithValue("@loginRoleId", loginRoleId)
             Dim adapter As New MySqlDataAdapter(command)
             Dim table As New DataTable()
             connection.Open()
@@ -519,21 +535,19 @@ Public Sub getStudentID()
         End If
     End Sub
 
-    Public Sub studentRegistration()
+    Function studentRegistration() As String
         Try
             Dim result = functions.getStaffProfile(adminlogin.loginStaffId)
-
             Dim staffFullName = result.item1.ToString
             Dim staffId = adminlogin.loginStaffId
 
             Dim studentId = "STD" & Now.ToString("yyyyMMddss") & functions.countId("STD")
-
             Dim passport = functions.passportSave(regStudent.studentProfilePic)
-            Dim connection = functions.connection
 
-            connection.open()
-            query = "INSERT INTO `student_tab`(`studentId`, `roleId`, `statusId`, `genderId`, `staffId`, `staffFullName`, `fullName`, `emailAddress`, `phoneNumber`, `passport`, `programmeId`, `createdTime`) VALUES(@studentId, @roleId, @statusId, @genderId, @staffId, @staffFullName, @fullName, @emailAddress, @phoneNumber, @passport, @programmeId, NOW())"
-            command = New MySqlCommand(query, connection)
+            Dim connection = functions.connection
+            connection.Open()
+            Dim query = "INSERT INTO `student_tab`(`studentId`, `roleId`, `statusId`, `genderId`, `staffId`, `staffFullName`, `fullName`, `emailAddress`, `phoneNumber`, `passport`, `programmeId`, `createdTime`) VALUES(@studentId, @roleId, @statusId, @genderId, @staffId, @staffFullName, @fullName, @emailAddress, @phoneNumber, @passport, @programmeId, NOW())"
+            Dim command = New MySqlCommand(query, connection)
             command.Parameters.AddWithValue("@studentId", studentId)
             command.Parameters.AddWithValue("@genderId", regStudent.studentGenderIdComboBox.SelectedValue)
             command.Parameters.AddWithValue("@staffId", staffId)
@@ -545,28 +559,21 @@ Public Sub getStudentID()
             command.Parameters.AddWithValue("@phoneNumber", regStudent.phoneNumberTxt.Text)
             command.Parameters.AddWithValue("@passport", passport)
             command.Parameters.AddWithValue("@programmeId", regStudent.studentProgrammeIdComboBox.SelectedValue)
-
-
-            reader = command.ExecuteReader
+            command.ExecuteNonQuery()
             connection.Close()
-
-            'connection.open()
-            'query = "INSERT INTO `account_tab`(`account_id`, `customer_id`, `account_balance`, `loan_balance`, `created_time`) VALUES(@account_id, @customer_id, 00.0, 00.0, NOW())"
-            'command = New MySqlCommand(query, connection)
-            'command.Parameters.AddWithValue("@account_id", account_id)
-            'command.Parameters.AddWithValue("@customer_id", customer_id)
-            'reader = command.ExecuteReader
-            'onnection.Close()
 
             MessageBox.Show("SUCCESS! Student Registration Successfully Saved", "AfoTECH Attendance Management System", MessageBoxButtons.OK, MessageBoxIcon.Information)
             functions.clearFunction()
             functions.getStudentID()
             functions.studentRecord()
+            Return studentId
+
 
         Catch ex As Exception
             MessageBox.Show("Student Registration failed: " & ex.Message, "AfoTECH Attendance Management System", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Return ""
         End Try
-    End Sub
+    End Function
 
     Public Sub UpdateStudent()
         Try
@@ -651,5 +658,22 @@ Public Sub getStudentID()
         End If
         Return e
     End Function
+
+    Function allCounts()
+        Dim connection = functions.connection
+        connection.Open()
+        query = "SELECT (SELECT COUNT(*) FROM staff_tab) AS totalStaff, (SELECT COUNT(*) FROM student_tab) AS totalStudent, (SELECT COUNT(*) FROM fingerprints_tab) AS totalEnrollment, (SELECT COUNT(*) FROM attendance_tab) AS totalAttendance;"
+        command = New MySqlCommand(query, connection)
+        reader = command.ExecuteReader
+        reader.Read()
+        Dim totalStaff = Convert.ToInt32(reader("totalStaff"))
+        Dim totalStudent = Convert.ToInt32(reader("totalStudent"))
+        Dim totalEnrollment = Convert.ToInt32(reader("totalEnrollment"))
+        Dim totalAttendance = Convert.ToInt32(reader("totalAttendance"))
+
+        connection.Close()
+        Return Tuple.Create(totalStaff, totalStudent, totalEnrollment, totalAttendance)
+    End Function
+
 
 End Module

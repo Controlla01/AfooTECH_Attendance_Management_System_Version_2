@@ -26,26 +26,24 @@ Partial Class regstudentfingerprint
         Me.Guna2GroupBox4 = New Guna.UI2.WinForms.Guna2GroupBox()
         Me.enrollStatusLabel = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.fingerCaptureBtn = New Guna.UI2.WinForms.Guna2Button()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.studentFingerPrintTemplate = New Guna.UI2.WinForms.Guna2PictureBox()
         Me.Guna2GroupBox3 = New Guna.UI2.WinForms.Guna2GroupBox()
         Me.studentProfilePic = New Guna.UI2.WinForms.Guna2PictureBox()
         Me.Guna2Panel2 = New Guna.UI2.WinForms.Guna2Panel()
-        Me.total_customer_count_label_txt = New Guna.UI2.WinForms.Guna2HtmlLabel()
+        Me.totalStudentCountLabel = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Me.Guna2HtmlLabel2 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Me.Guna2Panel1 = New Guna.UI2.WinForms.Guna2Panel()
         Me.Guna2HtmlLabel1 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Me.Guna2PictureBox1 = New Guna.UI2.WinForms.Guna2PictureBox()
-        Me.close_btn = New Guna.UI2.WinForms.Guna2Button()
         Me.Guna2HtmlLabel5 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Me.emailAddressTxt = New Guna.UI2.WinForms.Guna2TextBox()
-        Me.clearBtn = New Guna.UI2.WinForms.Guna2Button()
         Me.startEnrollBtn = New Guna.UI2.WinForms.Guna2Button()
         Me.Guna2Panel3 = New Guna.UI2.WinForms.Guna2Panel()
-        Me.scanProgressBar = New Guna.UI2.WinForms.Guna2ProgressBar()
+        Me.enrollProgressBar = New Guna.UI2.WinForms.Guna2ProgressBar()
         Me.selectFingerComboBox = New Guna.UI2.WinForms.Guna2ComboBox()
         Me.Guna2HtmlLabel3 = New Guna.UI2.WinForms.Guna2HtmlLabel()
+        Me.finishEnrolBtn = New Guna.UI2.WinForms.Guna2Button()
         Me.Guna2GroupBox4.SuspendLayout()
         Me.Panel2.SuspendLayout()
         CType(Me.studentFingerPrintTemplate, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -62,7 +60,6 @@ Partial Class regstudentfingerprint
         Me.Guna2GroupBox4.BorderRadius = 4
         Me.Guna2GroupBox4.Controls.Add(Me.enrollStatusLabel)
         Me.Guna2GroupBox4.Controls.Add(Me.Label6)
-        Me.Guna2GroupBox4.Controls.Add(Me.fingerCaptureBtn)
         Me.Guna2GroupBox4.Controls.Add(Me.Panel2)
         Me.Guna2GroupBox4.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
         Me.Guna2GroupBox4.ForeColor = System.Drawing.Color.Black
@@ -77,7 +74,7 @@ Partial Class regstudentfingerprint
         '
         Me.enrollStatusLabel.AutoSize = True
         Me.enrollStatusLabel.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
-        Me.enrollStatusLabel.Location = New System.Drawing.Point(131, 313)
+        Me.enrollStatusLabel.Location = New System.Drawing.Point(11, 316)
         Me.enrollStatusLabel.Name = "enrollStatusLabel"
         Me.enrollStatusLabel.Size = New System.Drawing.Size(160, 15)
         Me.enrollStatusLabel.TabIndex = 17
@@ -86,32 +83,11 @@ Partial Class regstudentfingerprint
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(131, 286)
+        Me.Label6.Location = New System.Drawing.Point(11, 289)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(45, 15)
         Me.Label6.TabIndex = 16
         Me.Label6.Text = "Status:"
-        '
-        'fingerCaptureBtn
-        '
-        Me.fingerCaptureBtn.BackColor = System.Drawing.SystemColors.Control
-        Me.fingerCaptureBtn.BorderColor = System.Drawing.Color.Transparent
-        Me.fingerCaptureBtn.BorderRadius = 5
-        Me.fingerCaptureBtn.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom
-        Me.fingerCaptureBtn.CheckedState.Parent = Me.fingerCaptureBtn
-        Me.fingerCaptureBtn.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.fingerCaptureBtn.CustomBorderColor = System.Drawing.Color.Transparent
-        Me.fingerCaptureBtn.CustomImages.Parent = Me.fingerCaptureBtn
-        Me.fingerCaptureBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.fingerCaptureBtn.ForeColor = System.Drawing.Color.White
-        Me.fingerCaptureBtn.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.fingerCaptureBtn.HoverState.Parent = Me.fingerCaptureBtn
-        Me.fingerCaptureBtn.Location = New System.Drawing.Point(14, 286)
-        Me.fingerCaptureBtn.Name = "fingerCaptureBtn"
-        Me.fingerCaptureBtn.ShadowDecoration.Parent = Me.fingerCaptureBtn
-        Me.fingerCaptureBtn.Size = New System.Drawing.Size(108, 42)
-        Me.fingerCaptureBtn.TabIndex = 5
-        Me.fingerCaptureBtn.Text = "CAPTURE"
         '
         'Panel2
         '
@@ -168,7 +144,7 @@ Partial Class regstudentfingerprint
         Me.Guna2Panel2.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
                     Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Guna2Panel2.BackColor = System.Drawing.Color.Silver
-        Me.Guna2Panel2.Controls.Add(Me.total_customer_count_label_txt)
+        Me.Guna2Panel2.Controls.Add(Me.totalStudentCountLabel)
         Me.Guna2Panel2.Controls.Add(Me.Guna2HtmlLabel2)
         Me.Guna2Panel2.FillColor = System.Drawing.Color.Silver
         Me.Guna2Panel2.Location = New System.Drawing.Point(0, 49)
@@ -177,16 +153,16 @@ Partial Class regstudentfingerprint
         Me.Guna2Panel2.Size = New System.Drawing.Size(763, 43)
         Me.Guna2Panel2.TabIndex = 34
         '
-        'total_customer_count_label_txt
+        'totalStudentCountLabel
         '
-        Me.total_customer_count_label_txt.BackColor = System.Drawing.Color.Transparent
-        Me.total_customer_count_label_txt.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.total_customer_count_label_txt.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.total_customer_count_label_txt.Location = New System.Drawing.Point(709, 13)
-        Me.total_customer_count_label_txt.Name = "total_customer_count_label_txt"
-        Me.total_customer_count_label_txt.Size = New System.Drawing.Size(11, 17)
-        Me.total_customer_count_label_txt.TabIndex = 7
-        Me.total_customer_count_label_txt.Text = "0"
+        Me.totalStudentCountLabel.BackColor = System.Drawing.Color.Transparent
+        Me.totalStudentCountLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.totalStudentCountLabel.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.totalStudentCountLabel.Location = New System.Drawing.Point(709, 13)
+        Me.totalStudentCountLabel.Name = "totalStudentCountLabel"
+        Me.totalStudentCountLabel.Size = New System.Drawing.Size(11, 17)
+        Me.totalStudentCountLabel.TabIndex = 7
+        Me.totalStudentCountLabel.Text = "0"
         '
         'Guna2HtmlLabel2
         '
@@ -205,7 +181,6 @@ Partial Class regstudentfingerprint
                     Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Guna2Panel1.Controls.Add(Me.Guna2HtmlLabel1)
         Me.Guna2Panel1.Controls.Add(Me.Guna2PictureBox1)
-        Me.Guna2Panel1.Controls.Add(Me.close_btn)
         Me.Guna2Panel1.FillColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
         Me.Guna2Panel1.Location = New System.Drawing.Point(1, 1)
         Me.Guna2Panel1.Name = "Guna2Panel1"
@@ -235,28 +210,6 @@ Partial Class regstudentfingerprint
         Me.Guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.Guna2PictureBox1.TabIndex = 0
         Me.Guna2PictureBox1.TabStop = False
-        '
-        'close_btn
-        '
-        Me.close_btn.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.close_btn.Animated = True
-        Me.close_btn.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-        Me.close_btn.BorderRadius = 19
-        Me.close_btn.CheckedState.Parent = Me.close_btn
-        Me.close_btn.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.close_btn.CustomImages.Parent = Me.close_btn
-        Me.close_btn.FillColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.close_btn.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.close_btn.ForeColor = System.Drawing.Color.White
-        Me.close_btn.HoverState.FillColor = System.Drawing.Color.Maroon
-        Me.close_btn.HoverState.Parent = Me.close_btn
-        Me.close_btn.Location = New System.Drawing.Point(719, 4)
-        Me.close_btn.Name = "close_btn"
-        Me.close_btn.ShadowDecoration.Parent = Me.close_btn
-        Me.close_btn.Size = New System.Drawing.Size(36, 40)
-        Me.close_btn.TabIndex = 0
-        Me.close_btn.Text = "X"
         '
         'Guna2HtmlLabel5
         '
@@ -294,28 +247,6 @@ Partial Class regstudentfingerprint
         Me.emailAddressTxt.Size = New System.Drawing.Size(351, 36)
         Me.emailAddressTxt.TabIndex = 36
         '
-        'clearBtn
-        '
-        Me.clearBtn.BackColor = System.Drawing.SystemColors.Control
-        Me.clearBtn.BorderColor = System.Drawing.Color.Transparent
-        Me.clearBtn.BorderRadius = 5
-        Me.clearBtn.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom
-        Me.clearBtn.CheckedState.Parent = Me.clearBtn
-        Me.clearBtn.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.clearBtn.CustomBorderColor = System.Drawing.Color.Transparent
-        Me.clearBtn.CustomImages.Parent = Me.clearBtn
-        Me.clearBtn.FillColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.clearBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.clearBtn.ForeColor = System.Drawing.Color.White
-        Me.clearBtn.HoverState.FillColor = System.Drawing.Color.Maroon
-        Me.clearBtn.HoverState.Parent = Me.clearBtn
-        Me.clearBtn.Location = New System.Drawing.Point(626, 171)
-        Me.clearBtn.Name = "clearBtn"
-        Me.clearBtn.ShadowDecoration.Parent = Me.clearBtn
-        Me.clearBtn.Size = New System.Drawing.Size(112, 40)
-        Me.clearBtn.TabIndex = 42
-        Me.clearBtn.Text = "CLEAR"
-        '
         'startEnrollBtn
         '
         Me.startEnrollBtn.BackColor = System.Drawing.SystemColors.Control
@@ -342,22 +273,23 @@ Partial Class regstudentfingerprint
         Me.Guna2Panel3.BorderColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.Guna2Panel3.BorderRadius = 5
         Me.Guna2Panel3.BorderThickness = 1
-        Me.Guna2Panel3.Controls.Add(Me.scanProgressBar)
+        Me.Guna2Panel3.Controls.Add(Me.enrollProgressBar)
         Me.Guna2Panel3.Location = New System.Drawing.Point(466, 499)
         Me.Guna2Panel3.Name = "Guna2Panel3"
         Me.Guna2Panel3.ShadowDecoration.Parent = Me.Guna2Panel3
         Me.Guna2Panel3.Size = New System.Drawing.Size(275, 62)
         Me.Guna2Panel3.TabIndex = 43
         '
-        'scanProgressBar
+        'enrollProgressBar
         '
-        Me.scanProgressBar.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Horizontal
-        Me.scanProgressBar.Location = New System.Drawing.Point(21, 9)
-        Me.scanProgressBar.Name = "scanProgressBar"
-        Me.scanProgressBar.ShadowDecoration.Parent = Me.scanProgressBar
-        Me.scanProgressBar.Size = New System.Drawing.Size(233, 45)
-        Me.scanProgressBar.TabIndex = 46
-        Me.scanProgressBar.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault
+        Me.enrollProgressBar.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Horizontal
+        Me.enrollProgressBar.Location = New System.Drawing.Point(21, 9)
+        Me.enrollProgressBar.Maximum = 4
+        Me.enrollProgressBar.Name = "enrollProgressBar"
+        Me.enrollProgressBar.ShadowDecoration.Parent = Me.enrollProgressBar
+        Me.enrollProgressBar.Size = New System.Drawing.Size(233, 45)
+        Me.enrollProgressBar.TabIndex = 46
+        Me.enrollProgressBar.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault
         '
         'selectFingerComboBox
         '
@@ -392,15 +324,37 @@ Partial Class regstudentfingerprint
         Me.Guna2HtmlLabel3.TabIndex = 45
         Me.Guna2HtmlLabel3.Text = "Select Fingers"
         '
+        'finishEnrolBtn
+        '
+        Me.finishEnrolBtn.BackColor = System.Drawing.SystemColors.Control
+        Me.finishEnrolBtn.BorderColor = System.Drawing.Color.Transparent
+        Me.finishEnrolBtn.BorderRadius = 5
+        Me.finishEnrolBtn.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom
+        Me.finishEnrolBtn.CheckedState.Parent = Me.finishEnrolBtn
+        Me.finishEnrolBtn.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.finishEnrolBtn.CustomBorderColor = System.Drawing.Color.Transparent
+        Me.finishEnrolBtn.CustomImages.Parent = Me.finishEnrolBtn
+        Me.finishEnrolBtn.FillColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.finishEnrolBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.finishEnrolBtn.ForeColor = System.Drawing.Color.White
+        Me.finishEnrolBtn.HoverState.FillColor = System.Drawing.Color.Maroon
+        Me.finishEnrolBtn.HoverState.Parent = Me.finishEnrolBtn
+        Me.finishEnrolBtn.Location = New System.Drawing.Point(583, 171)
+        Me.finishEnrolBtn.Name = "finishEnrolBtn"
+        Me.finishEnrolBtn.ShadowDecoration.Parent = Me.finishEnrolBtn
+        Me.finishEnrolBtn.Size = New System.Drawing.Size(158, 40)
+        Me.finishEnrolBtn.TabIndex = 46
+        Me.finishEnrolBtn.Text = "FINISH ENROLLMENT"
+        '
         'regstudentfingerprint
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(762, 579)
+        Me.Controls.Add(Me.finishEnrolBtn)
         Me.Controls.Add(Me.Guna2HtmlLabel3)
         Me.Controls.Add(Me.selectFingerComboBox)
         Me.Controls.Add(Me.Guna2Panel3)
-        Me.Controls.Add(Me.clearBtn)
         Me.Controls.Add(Me.startEnrollBtn)
         Me.Controls.Add(Me.Guna2HtmlLabel5)
         Me.Controls.Add(Me.emailAddressTxt)
@@ -433,24 +387,22 @@ Partial Class regstudentfingerprint
     Friend WithEvents Guna2GroupBox4 As Guna.UI2.WinForms.Guna2GroupBox
     Friend WithEvents enrollStatusLabel As System.Windows.Forms.Label
     Friend WithEvents Label6 As System.Windows.Forms.Label
-    Friend WithEvents fingerCaptureBtn As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents Panel2 As System.Windows.Forms.Panel
     Friend WithEvents studentFingerPrintTemplate As Guna.UI2.WinForms.Guna2PictureBox
     Friend WithEvents Guna2GroupBox3 As Guna.UI2.WinForms.Guna2GroupBox
     Friend WithEvents studentProfilePic As Guna.UI2.WinForms.Guna2PictureBox
     Friend WithEvents Guna2Panel2 As Guna.UI2.WinForms.Guna2Panel
-    Friend WithEvents total_customer_count_label_txt As Guna.UI2.WinForms.Guna2HtmlLabel
+    Friend WithEvents totalStudentCountLabel As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents Guna2HtmlLabel2 As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents Guna2Panel1 As Guna.UI2.WinForms.Guna2Panel
     Friend WithEvents Guna2HtmlLabel1 As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents Guna2PictureBox1 As Guna.UI2.WinForms.Guna2PictureBox
-    Friend WithEvents close_btn As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents Guna2HtmlLabel5 As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents emailAddressTxt As Guna.UI2.WinForms.Guna2TextBox
-    Friend WithEvents clearBtn As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents startEnrollBtn As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents Guna2Panel3 As Guna.UI2.WinForms.Guna2Panel
-    Friend WithEvents scanProgressBar As Guna.UI2.WinForms.Guna2ProgressBar
+    Friend WithEvents enrollProgressBar As Guna.UI2.WinForms.Guna2ProgressBar
     Friend WithEvents selectFingerComboBox As Guna.UI2.WinForms.Guna2ComboBox
     Friend WithEvents Guna2HtmlLabel3 As Guna.UI2.WinForms.Guna2HtmlLabel
+    Friend WithEvents finishEnrolBtn As Guna.UI2.WinForms.Guna2Button
 End Class

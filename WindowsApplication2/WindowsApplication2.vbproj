@@ -55,6 +55,9 @@
     <Reference Include="AForge.Video.DirectShow">
       <HintPath>G:\fingerCamCode\AForge.Video.DirectShow.dll</HintPath>
     </Reference>
+    <Reference Include="BouncyCastle.Crypto">
+      <HintPath>..\..\..\..\..\Downloads\bouncycastle.1.8.9\lib\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
     <Reference Include="DPFPDevNET, Version=1.6.1.0, Culture=neutral, PublicKeyToken=696774c42ee28c57, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\..\Downloads\DigitalPersona-master\DigitalPersona-master\DigitalPersona\LIB - SDK Digital Persona\Bin\DPFPDevNET.dll</HintPath>
@@ -78,6 +81,9 @@
     <Reference Include="Guna.UI2">
       <HintPath>F:\Guna_UI_Framework_Ultimate_v2.0.0.1\Guna_UI_Framework_Ultimate_v2.0.0.1\Guna.UI-Framework-Lib-master\Guna.UI2 WinForms\.net 4.0\Guna.UI2.dll</HintPath>
     </Reference>
+    <Reference Include="itextsharp">
+      <HintPath>..\..\..\..\..\Downloads\itextsharp.5.5.13.3\lib\itextsharp.dll</HintPath>
+    </Reference>
     <Reference Include="MySql.Data">
       <HintPath>..\..\..\..\..\Downloads\MySql.Data.DLL</HintPath>
     </Reference>
@@ -87,6 +93,7 @@
     <Reference Include="System.Drawing" />
     <Reference Include="System.Management" />
     <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -159,28 +166,10 @@
     <Compile Include="Admin\regstudentfingerprint.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Admin\setattendancetime.Designer.vb">
-      <DependentUpon>setattendancetime.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Admin\setattendancetime.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Admin\setchangepassword.Designer.vb">
       <DependentUpon>setchangepassword.vb</DependentUpon>
     </Compile>
     <Compile Include="Admin\setchangepassword.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Admin\setresetfingerprint.Designer.vb">
-      <DependentUpon>setresetfingerprint.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Admin\setresetfingerprint.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Admin\setresetpassword.Designer.vb">
-      <DependentUpon>setresetpassword.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Admin\setresetpassword.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Admin\studentRecords.Designer.vb">
@@ -263,17 +252,8 @@
     <EmbeddedResource Include="Admin\regstudentfingerprint.resx">
       <DependentUpon>regstudentfingerprint.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Admin\setattendancetime.resx">
-      <DependentUpon>setattendancetime.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Admin\setchangepassword.resx">
       <DependentUpon>setchangepassword.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Admin\setresetfingerprint.resx">
-      <DependentUpon>setresetfingerprint.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Admin\setresetpassword.resx">
-      <DependentUpon>setresetpassword.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Admin\studentRecords.resx">
       <DependentUpon>studentRecords.vb</DependentUpon>
@@ -335,6 +315,7 @@
     <Content Include="bg-5.jpg" />
     <Content Include="bg-8.png" />
     <Content Include="bg-9.jpg" />
+    <None Include="Resources\Car Wash.jpg" />
     <Content Include="Resources\eye.jpg" />
     <None Include="Resources\hide.png" />
     <None Include="Resources\eye.png" />
